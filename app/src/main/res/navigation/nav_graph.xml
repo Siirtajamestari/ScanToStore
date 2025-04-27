@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+
+    <!-- nav_graph.xml -->
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.ui.login.LoginFragment"
+        android:label="Вход"
+        tools:layout="@layout/fragment_login" >
+
+        <!-- Action to mainFragment with animations -->
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <!-- MainFragment -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.myapplication.MainFragment"
+        android:label="Таблицы"
+        tools:layout="@layout/fragment_main" >
+        <!-- Action to db_fragment with animations -->
+        <action
+            android:id="@+id/action_mainFragment_to_db_fragment"
+            app:destination="@id/db_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!-- Action to aboutFragment with animations -->
+        <action
+            android:id="@+id/action_mainFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_adminFragment"
+            app:destination="@id/adminFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- db_fragment -->
+    <fragment
+        android:id="@+id/db_fragment"
+        android:name="com.example.myapplication.DbFragment"
+        android:label="Таблица"
+        tools:layout="@layout/fragment_db_fragment">
+        <argument
+            android:name="tableName"
+            app:argType="string" />
+        <!-- Action to mainFragment with animations -->
+        <action
+            android:id="@+id/action_db_fragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <!-- Action to scanFragment with animations -->
+        <action
+            android:id="@+id/action_db_fragment_to_scanFragment"
+            app:destination="@id/scanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!-- Arguments -->
+        <argument
+            android:name="scanvalue"
+            android:defaultValue='" "'
+            app:argType="string" />
+    </fragment>
+
+    <!-- scanFragment -->
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.example.myapplication.ScanFragment"
+        android:label="СКАНИРОВАНИЕ"
+        tools:layout="@layout/fragment_scan" >
+        <!-- Action to db_fragment with animations -->
+        <action
+            android:id="@+id/action_scanFragment_to_db_fragment"
+            app:destination="@id/db_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <!-- Argument -->
+        <argument
+            android:name="tableName"
+            app:argType="string" />
+    </fragment>
+
+    <!-- aboutFragment -->
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.myapplication.AboutFragment"
+        android:label="Про приложение"
+        tools:layout="@layout/fragment_about" >
+        <!-- Action to mainFragment with animations -->
+        <action
+            android:id="@+id/action_aboutFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.myapplication.AdminFragment"
+        android:label="Админка"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

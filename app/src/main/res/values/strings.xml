@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ScanToStore</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Почта</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войти или зарегистрироваться</string>
+    <string name="action_sign_in_short">Войти</string>
+    <string name="welcome">"Добро Пожаловать "</string>
+    <string name="invalid_username">Неподходящий логин</string>
+    <string name="invalid_password">Пароль должен быть не менее 5 знаков!</string>
+    <string name="login_failed">"Загрузка провалилась"</string>
+    <string name="title_activity_login">ScanToStore</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="qr_about">Приложение для ведения учета материальных средств. Выберите таблицу, а затем добавляйте предметы сканируя QR-коды. \nСодержание QR-кода должно быть в формате: ИМЯ;ЦЕНА;ЛОКАЦИЯ;СЕРИЙНЫЙ НОМЕР</string>
+    <string name="login">Войти</string>
+    <string name="password">Пароль</string>
+    <string name="login_txt">Логин</string>
+    <string name="create_user">Создать пользователя</string>
+    <string name="name">Nikita Naimushin</string>
+    <string name="group">Group: IKBO 26-21</string>
+    <string name="madeindate">Made in 2025</string>
+    <string name="about">About</string>
+    <string name="add_item">Add Item</string>
+    <string name="search">Поиск…</string>
+    <string name="ZESCAN">BUTTON THAT OPEN ZE SCAN</string>
+    <string name="scan">Сканировать</string>
+    <string name="clear_search">CLEAR</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config>
+        <!-- Запрещаем обычный HTTP -->
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/localhost" />   <!-- наш CA -->
+        </trust-anchors>
+    </base-config>
+
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="false">192.168.121.102</domain>
+        <port>3443</port>
+    </domain-config>
+</network-security-config>

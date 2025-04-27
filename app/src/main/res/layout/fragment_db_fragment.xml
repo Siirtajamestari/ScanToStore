@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary">
+
+    <!-- Gray container for SearchView and FloatingActionButton -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="?attr/colorPrimaryVariant"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:cardCornerRadius="@dimen/pad16">
+
+        <!-- SearchView -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:queryHint="@string/search"
+            android:textColorHint="@color/black" />
+
+        <!-- Clear Button (FloatingActionButton) to the right of the SearchView -->
+    </LinearLayout>
+
+    <!-- RecyclerView to show your list, below the SearchView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/table_data_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <!-- Floating Action Button (FAB) positioned at the bottom-right -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/StartScanButton"
+        style="@style/CustomFloatingActionButtonStyle"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="?attr/colorSecondary"
+        android:layout_margin="@dimen/pad16"
+        android:contentDescription="@string/ZESCAN"
+        android:elevation="6dp"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+</LinearLayout>

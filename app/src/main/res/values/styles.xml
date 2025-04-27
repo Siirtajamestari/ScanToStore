@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define a custom style for EditText -->
+    <style name="CustomEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/pad16</item>
+        <item name="android:textSize">@dimen/pas16</item>
+        <item name="android:textColorHint">?attr/colorOnSecondary</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:layout_marginBottom">@dimen/pad16</item>
+    </style>
+
+    <style name="CustomButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:padding">@dimen/pad16</item>
+        <item name="android:textSize">@dimen/pas16</item>
+        <item name="android:backgroundTint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="CustomFloatingActionButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/pad16</item>
+        <item name="android:layout_marginBottom">@dimen/pad16</item>
+        <item name="android:backgroundTint">?attr/colorSecondary</item>
+        <item name="android:clickable">true</item>
+        <item name="android:contentDescription">@string/add_item</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+</resources>
